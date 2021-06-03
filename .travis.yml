@@ -5,10 +5,11 @@ compiler:
   - gcc
 
 os:
-  - freebsd
-  - os: linux
+  - linux
       dist: bionic
       arch: s390x
+  - freebsd
+  
 
 script:
   - ./autogen.sh

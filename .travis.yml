@@ -6,6 +6,9 @@ compiler:
 
 os:
   - freebsd
+  - os: linux
+      dist: bionic
+      arch: s390x
 
 script:
   - ./autogen.sh

@@ -4,11 +4,12 @@ compiler:
   - clang
   - gcc
 
-os:
-  - linux
+matrix:
+  include:
+    - os: linux
       dist: bionic
       arch: s390x
-  - freebsd
+    - os freebsd
   
 
 script:

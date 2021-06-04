@@ -5,8 +5,9 @@ matrix:
     - os: linux
       dist: bionic
       arch: s390x
-      compiler: gcc
-      compiler: clang
+      compiler:
+      - clang
+      - gcc
       addons:
         apt:
          update: true
@@ -14,8 +15,9 @@ matrix:
          - libncurses5-dev
          - libncursesw5-dev
     - os: freebsd
-      compiler: gcc
-      compiler: clang
+      compiler:
+      - clang
+      - gcc
   
 
 script:

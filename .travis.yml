@@ -9,13 +9,14 @@ os:
   - linux
   
 dist: bionic
-      arch: s390x
-      addons:
-        apt:
-         update: true
-         packages:
-         - libncurses5-dev
-         - libncursesw5-dev
+arch: s390x
+
+addons:
+  apt:
+    update: true
+    packages:
+    - libncurses5-dev
+    - libncursesw5-dev      
   
 
 script:

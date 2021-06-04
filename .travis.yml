@@ -17,4 +17,4 @@ script:
   # clang might warn about C11 generic selections in isnan()
   - CFLAGS=-Wno-c11-extensions ./configure --disable-unicode --enable-werror
   - make -k
-  - CFLAGS=-Wno-c11-extensions make distcheck DISTCHECK_CONFIGURE_FLAGS=--enable-werror
+  - CFLAGS=-Wno-c11-extensions make distcheck DISTCHECK_CONFIGURE_FLAGS=--enable-werror --disable-unicode

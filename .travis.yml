@@ -3,11 +3,12 @@ language: c
 compiler:
   - gcc
   - clang
-
-matrix:
-  include:
-    - os: linux
-      dist: bionic
+ 
+os:
+  - freebsd
+  - linux
+  
+dist: bionic
       arch: s390x
       addons:
         apt:
@@ -15,7 +16,6 @@ matrix:
          packages:
          - libncurses5-dev
          - libncursesw5-dev
-    - os: freebsd
   
 
 script:

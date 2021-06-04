@@ -9,12 +9,18 @@ matrix:
     - os: linux
       dist: bionic
       arch: s390x
+      addons:
+        apt:
+         update: true
+         packages:
+         - libncurses5-dev
+         - libncursesw5-dev
     - os: freebsd
   
 
 script:
   - ./autogen.sh
   # clang might warn about C11 generic selections in isnan()
-  - CFLAGS=-Wno-c11-extensions ./configure --disable-unicode --enable-werror
+  - CFLAGS=-Wno-c11-extensions ./configure --enable-werror
   - make -k
-  - CFLAGS=-Wno-c11-extensions make distcheck DISTCHECK_CONFIGURE_FLAGS=--enable-werror --disable-unicode
+  - CFLAGS=-Wno-c11-extensions make distcheck DISTCHECK_CONFIGURE_FLAGS=--enable-werror

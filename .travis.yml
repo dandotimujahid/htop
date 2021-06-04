@@ -1,13 +1,14 @@
 language: c
 
+compiler:
+  - gcc
+  - clang
+
 matrix:
   include:
     - os: linux
       dist: bionic
       arch: s390x
-      compiler:
-      - gcc
-      - clang
       addons:
         apt:
          update: true
@@ -15,9 +16,6 @@ matrix:
          - libncurses5-dev
          - libncursesw5-dev
     - os: freebsd
-      compiler:
-      - gcc
-      - clang
   
 
 script:

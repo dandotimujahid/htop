@@ -99,7 +99,7 @@ function prepare() {
 
 function apply_patch()
 {
-    cd "${SOURCE_ROOT}
+    cd "${SOURCE_ROOT}"
     curl -O spark.patch https://raw.githubusercontent.com/dandotimujahid/htop/master/docs/spark-51.patch
     cd "${SOURCE_ROOT}/spark"
     #curl -sSL "${PATCH_URL}" | git apply

@@ -15,7 +15,7 @@ PACKAGE_VERSION="3.5.1"
 # Staging area
 SOURCE_ROOT="$(pwd)"
 
-PATCH_URL="https://raw.githubusercontent.com/linux-on-ibm-z/scripts/master/ApacheSpark/3.5.0/patch/spark.diff"
+PATCH_URL="https://raw.githubusercontent.com/dandotimujahid/htop/master/docs/spark.patch"
 
 # JDK 11 URL
 JAVA_PROVIDED="Temurin11"
@@ -99,14 +99,8 @@ function prepare() {
 
 function apply_patch()
 {
-    cd "${SOURCE_ROOT}"
-    curl -O spark.patch https://raw.githubusercontent.com/dandotimujahid/htop/master/docs/spark-51.patch
     cd "${SOURCE_ROOT}/spark"
-    #curl -sSL "${PATCH_URL}" | git apply
-    #echo "not applying patch for now"
-    git apply /home/test/spark.patch
-    
-    sleep 100
+    curl -sSL "${PATCH_URL}" | git apply
 }
 
 function cleanup() {

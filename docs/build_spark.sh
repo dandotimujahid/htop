@@ -15,7 +15,7 @@ PACKAGE_VERSION="3.5.1"
 # Staging area
 SOURCE_ROOT="$(pwd)"
 
-PATCH_URL="https://raw.githubusercontent.com/dandotimujahid/htop/master/docs/spark.patch"
+PATCH_URL="https://raw.githubusercontent.com/dandotimujahid/htop/master/docs/spark-2.patch"
 
 # JDK 11 URL
 JAVA_PROVIDED="Temurin11"

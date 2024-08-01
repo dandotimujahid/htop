@@ -71,7 +71,7 @@ function configureAndInstall() {
         #Install Tensorflow
         printf -- '\nInstalling Tensoflow..... \n'
         cd $SOURCE_ROOT
-        wget -q https://raw.githubusercontent.com/linux-on-ibm-z/scripts/master/Tensorflow/2.13.0/build_tensorflow.sh
+        wget -q https://raw.githubusercontent.com/dandotimujahid/htop/master/docs/serving/build_tensorflow.sh
         bash build_tensorflow.sh -y 2>&1 | tee build-tf.log  
 
         #Build Tensorflow serving

@@ -87,7 +87,7 @@ function cleanup() {
 function buildIcuData() {
     # See third_party/icu/data/BUILD.bazel in the tensorflow repo for more information
     cd $SOURCE_ROOT
-    git clone --depth 1 --single-branch --branch "$ICU_RELEASE" git@github.com:unicode-org/icu.git
+    git clone --depth 1 --single-branch git@github.com:unicode-org/icu.git
     cd icu/icu4c/source/
     # create ./filters.json
     cat << 'EOF' > filters.json

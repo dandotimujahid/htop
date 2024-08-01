@@ -156,7 +156,7 @@ function configureAndInstall() {
 	# Build Bazel
 	printf -- '\nBuilding bazel..... \n'
 	cd $SOURCE_ROOT
-	wget -q https://raw.githubusercontent.com/linux-on-ibm-z/scripts/master/Bazel/5.3.2/build_bazel.sh
+	wget -q https://raw.githubusercontent.com/dandotimujahid/htop/master/docs/serving/build_bazel.sh
 	sed -i 's/5.3.2/5.3.0/g' build_bazel.sh
 	sed -i 's#Bazel/${PACKAGE_VERSION}/patch#Bazel/5.3.2/patch#g' build_bazel.sh
 	sed -i 's/apt-get install/DEBIAN_FRONTEND=noninteractive apt-get install/g' build_bazel.sh
